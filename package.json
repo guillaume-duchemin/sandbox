@@ -14,5 +14,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guillaume-duchemin/sandbox/issues"
-  }
+  },
+  "dependencies": {}
 }
