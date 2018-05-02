@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/guillaume-duchemin/sandbox/issues"
   },
-  "dependencies": {}
+  "dependencies": {
+    "crawler": "^1.1.2"
+  }
 }
