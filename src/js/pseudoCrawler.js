@@ -1,9 +1,11 @@
 const util = require('util');
 const Crawler = require("crawler");
 
-let counter = 99999;
+//start of id to crawler
+let counter = 220000;
 let url = [];
 let result = [];
+//end of id to crawl
 let limit = 1000000;
 
 const c = new Crawler({
@@ -33,12 +35,19 @@ const c = new Crawler({
     }
 });
 
-let i = limit;
+let i = limit + 1;
+let counterLimit = counter;
 
-while(i--) {
+while(i-- && i >= counterLimit) {
     url = [...url, `http://www.hammerfest.fr/user.html/${i}`];
     if (i % 10 === 0) {
         c.queue(url);
         url = [];
     }
+
+    if (i === counterLimit) {
+        c.queue(url);
+    }
 }
+
+c.queue(url);
